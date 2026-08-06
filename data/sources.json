@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Oracle Siebel Bookshelf",
+    "url": "https://docs.oracle.com/en/applications/siebel/index.html",
+    "description": "Official Oracle Siebel CRM documentation portal with all guides and references"
+  },
+  {
+    "name": "Siebel CRM Architecture and Infrastructure",
+    "url": "https://docs.oracle.com/cd/F14158_13/books/PerformTun/siebel-crm-architecture-and-infrastructure.html",
+    "description": "Architecture overview including components, infrastructure, and performance tuning"
+  },
+  {
+    "name": "Siebel CRM Fundamentals Guide",
+    "url": "https://www.cleverence.com/articles/oracle-documentation/siebel-crm-fundamentals-guide-4827",
+    "description": "Comprehensive guide covering architecture, configuration, integration, security, and best practices"
+  },
+  {
+    "name": "Siebel CRM Tutorial (ACTE)",
+    "url": "https://www.acte.in/what-is-siebel-crm-tutorial",
+    "description": "Beginner tutorial covering Siebel CRM concepts, modules, applications, and advantages"
+  },
+  {
+    "name": "Siebel Tutorials Collection (Aired)",
+    "url": "http://www.aired.in/2013/06/siebel-tutorials.html",
+    "description": "Collection of Siebel configuration articles, best practices, and troubleshooting guides"
+  },
+  {
+    "name": "Siebel Architecture Overview (Oracle)",
+    "url": "https://docs.oracle.com/cd/F26413_09/books/DeplmtPlan/siebel-architecture-overview.html",
+    "description": "Deployment planning and architecture overview from Oracle"
+  },
+  {
+    "name": "Siebel CRM Online Training (SlideShare)",
+    "url": "https://www.slideshare.net/slideshow/siebel-crm-online-trainingpdf/251548905",
+    "description": "Training presentation covering Siebel CRM foundations, architecture, and configuration"
+  },
+  {
+    "name": "Siebel CRM Deployment Guide (A10 Networks)",
+    "url": "https://www.a10networks.com/wp-content/uploads/A10-DG-Oracle_Siebel_CRM.pdf",
+    "description": "Deployment guide with topology, load balancing, and configuration details"
+  }
+]
