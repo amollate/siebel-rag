@@ -64,6 +64,17 @@ if pipeline is None:
     st.error("Failed to initialize the RAG pipeline. Check that all dependencies are installed.")
     st.stop()
 
+if pipeline.vector_store is None:
+    pipeline._init_components()
+
+if pipeline.vector_store.count() == 0:
+    with st.spinner("📚 Ingesting Siebel documentation into the knowledge base... (first run only)"):
+        try:
+            pipeline.ingest()
+            st.success(f"Knowledge base populated! {pipeline.vector_store.count()} chunks indexed.")
+        except Exception as e:
+            st.warning(f"Ingestion failed: {e}. You can try again later.")
+
 query = st.text_input(
     "Ask a question about Siebel 6:",
     value=st.session_state.get("question", ""),
