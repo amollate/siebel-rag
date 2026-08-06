@@ -1,6 +1,7 @@
 import streamlit as st
 import os
 import sys
+import json
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
@@ -68,12 +69,18 @@ if pipeline.vector_store is None:
     pipeline._init_components()
 
 if pipeline.vector_store.count() == 0:
-    with st.spinner("📚 Ingesting Siebel documentation into the knowledge base... (first run only)"):
-        try:
-            pipeline.ingest()
-            st.success(f"Knowledge base populated! {pipeline.vector_store.count()} chunks indexed.")
-        except Exception as e:
-            st.warning(f"Ingestion failed: {e}. You can try again later.")
+    seed_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "seed_chunks.json")
+    if os.path.exists(seed_path):
+        with st.spinner("📚 Loading pre-seeded knowledge base..."):
+            try:
+                with open(seed_path, "r") as f:
+                    seed_chunks = json.load(f)
+                pipeline.vector_store.add_documents(seed_chunks)
+                st.success(f"Knowledge base loaded! {pipeline.vector_store.count()} chunks indexed.")
+            except Exception as e:
+                st.warning(f"Seeding failed: {e}. You can try again later.")
+    else:
+        st.warning("No knowledge base found. Run ingestion to populate it.")
 
 query = st.text_input(
     "Ask a question about Siebel 6:",

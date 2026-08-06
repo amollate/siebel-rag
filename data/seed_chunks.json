@@ -1,0 +1,154 @@
+[
+  {
+    "text": "Siebel CRM is a leading enterprise CRM platform built on a proven data model and industry best practices. It offers 21 industry-specific applications, delivering high scalability, deep configurability, and an open architecture that can be deployed on-premises or in any cloud. Core Architecture: Siebel CRM uses a 3-tier architecture consisting of the client layer, application server layer, and database layer. The Siebel Web Engine generates HTML pages that are served through a web server to browser clients. Key Components:\n- Business Objects (BO): Logical groupings of related business components\n- Business Components (BC): Data-level building blocks that map to database tables\n- Applets: User interface objects that display business component data\n- Views: Collections of related applets displayed in the Siebel client\n- Screens: Top-level containers for views\n- Workflows: Automated multi-step business processes\n- Business Services: Reusable logic components\nSiebel Tools is the primary development environment for configuring Siebel applications. It allows developers to define business objects, business components, applets, views, and workflows declaratively. The Siebel data model follows a strict hierarchy: Business Object > Business Component > Field. Business Components can be joined to create master-detail relationships. Multi-Value Groups allow child records to be displayed within a parent record.",
+    "metadata": {
+      "url": "https://docs.oracle.com/en/applications/siebel/index.html",
+      "source": "Oracle Official Documentation",
+      "section_title": "Introduction"
+    }
+  },
+  {
+    "text": "Siebel CRM Fundamentals: Architecture, Configuration, and Integration\nWhat is Oracle Siebel CRM? Oracle Siebel CRM is a mature, highly configurable customer relationship management platform built to handle complex processes, multiple business units, and very large user and data volumes. Core Architecture and Components:\nSiebel CRM follows a 3-tier architecture:\n1. Client Tier: Siebel Web Client or Siebel Desktop Client\n2. Application Server Tier: Siebel Server with Application Object Manager\n3. Database Tier: Oracle Database or other supported RDBMS",
+    "metadata": {
+      "url": "https://www.cleverence.com/articles/oracle-documentation/siebel-crm-fundamentals-guide-4827",
+      "source": "Cleverence Siebel Guide",
+      "section_title": "Introduction"
+    }
+  },
+  {
+    "text": "Business Objects (BO) encapsulate real-life concepts like Account, Opportunity, or Contact. Business Components (BC) are the data-level building blocks such as Account, Contact, or Opportunity Line Items. Applets surface BC data on screens and views. Links represent one-to-many relationships between BCs within a BO context. Multi-Value Groups (MVGs) expose related child records inside a parent applet. Picklists, LOVs, and joins enrich records with reference data.",
+    "metadata": {
+      "url": "https://www.cleverence.com/articles/oracle-documentation/siebel-crm-fundamentals-guide-4827",
+      "source": "Cleverence Siebel Guide",
+      "section_title": "Data Model Basics:"
+    }
+  },
+  {
+    "text": "Siebel Tools is where administrators and developers define the repository. The guiding principle is configure first, script second. Start with declarative settings like user properties, joins, and picklists. Only add script when a requirement cannot be met by configuration.",
+    "metadata": {
+      "url": "https://www.cleverence.com/articles/oracle-documentation/siebel-crm-fundamentals-guide-4827",
+      "source": "Cleverence Siebel Guide",
+      "section_title": "Configuration with Siebel Tools:"
+    }
+  },
+  {
+    "text": "Workflows orchestrate multi-step processes such as approvals, escalations, and data synchronization. Business Services encapsulate logic you want to reuse programmatically.",
+    "metadata": {
+      "url": "https://www.cleverence.com/articles/oracle-documentation/siebel-crm-fundamentals-guide-4827",
+      "source": "Cleverence Siebel Guide",
+      "section_title": "Workflows and Business Services:"
+    }
+  },
+  {
+    "text": "Siebel security model combines authentication, authorization, and data visibility. Authorization is driven by Responsibilities, which control what screens and views users can see. Position and Organization models determine which records users can access.",
+    "metadata": {
+      "url": "https://www.cleverence.com/articles/oracle-documentation/siebel-crm-fundamentals-guide-4827",
+      "source": "Cleverence Siebel Guide",
+      "section_title": "Security, Roles, and Data Access:"
+    }
+  },
+  {
+    "text": "What is Siebel CRM? Siebel CRM is a customer relationship management platform developed by Siebel Systems and later acquired by Oracle Corporation in 2005. Siebel CRM Applications:\n- Business Analytics Applications: Provides analytical study of business data\n- Contact Center and Service: Transforms contact center into sales, marketing, and service delivery\n- Customer Data Integration: Stores all customer data for a solid database\n- Customer Order Management: Manages orders and delivery fulfillment\n- Enterprise Marketing: Segmentation and campaign capabilities\nSiebel Architecture:\nThe Siebel architecture consists of:\n1. Siebel Web Server Extension (SWSE) - handles HTTP requests\n2. Siebel Gateway Name Server - routes requests to appropriate Siebel Server\n3. Siebel Server - processes business logic and manages user sessions\n4. Siebel Database - stores all data",
+    "metadata": {
+      "url": "https://www.acte.in/what-is-siebel-crm-tutorial",
+      "source": "ACTE Siebel Tutorial",
+      "section_title": "Introduction"
+    }
+  },
+  {
+    "text": "Siebel Tools is the primary development and configuration environment. It provides an Object Explorer for browsing and modifying the Siebel repository. Developers use it to create and modify business objects, business components, applets, views, and workflows. The Siebel Web Architecture:\nWhen a user accesses a Siebel application through a web browser, the request travels through SWSE to the Siebel Gateway, which routes it to the appropriate Siebel Server. The server processes the request and returns HTML through the Siebel Web Engine.",
+    "metadata": {
+      "url": "https://www.acte.in/what-is-siebel-crm-tutorial",
+      "source": "ACTE Siebel Tutorial",
+      "section_title": "Siebel Tools:"
+    }
+  },
+  {
+    "text": "Siebel CRM Architecture and Infrastructure\nGeneric Architecture of Siebel CRM:\nThe Siebel CRM deployment consists of the following components:\n1. Siebel Web Server Extension (SWSE): A plug-in for the web server that handles Siebel-specific HTTP requests\n2. Siebel Gateway Name Server: Routes incoming requests to the appropriate Siebel Server based on the enterprise and server configuration\n3. Siebel Server: The application server that processes business logic and manages user sessions\n4. Application Object Manager (AOM): The core component within Siebel Server that handles object management\n5. Siebel Database: Stores all Siebel data including seed data and configuration metadata\nSiebel Enterprise Server:\nThe Siebel Enterprise Server is a logical grouping of one or more Siebel Servers that connect to one Siebel database. The corresponding configurable entity is called the Siebel Enterprise. Server parameters can be configured at the enterprise level and inherited by individual Siebel Servers. Siebel Gateway:\nThe Siebel Gateway stores configuration and status information for Siebel Enterprise, Siebel Server, Siebel Application Interface, Siebel Enterprise Cache, and other components. There can be only one Siebel Gateway per environment. Siebel Open UI:\nOpen UI modernized Siebel presentation layer with standards-based web technologies and browser flexibility. It enables responsive layouts, client-side scripting, and intuitive styling options. Open UI is metadata-driven, allowing most changes without custom code. When scripting is necessary, ensure it is lightweight and well-documented.",
+    "metadata": {
+      "url": "https://docs.oracle.com/cd/F14158_13/books/PerformTun/siebel-crm-architecture-and-infrastructure.html",
+      "source": "Oracle Official Documentation",
+      "section_title": "Introduction"
+    }
+  },
+  {
+    "text": "Architecture of Siebel Business Applications",
+    "metadata": {
+      "url": "https://docs.oracle.com/cd/E95904_01/books/ConfigApps/architecture-of-siebel-business-applications.html",
+      "source": "Oracle Official Documentation",
+      "section_title": "Introduction"
+    }
+  },
+  {
+    "text": "An applet is a user interface object that allows the user to view, enter, and modify data from a single business component. Applet types include: Form Applet, List Applet, Chart Applet, and MVG Applet.",
+    "metadata": {
+      "url": "https://docs.oracle.com/cd/E95904_01/books/ConfigApps/architecture-of-siebel-business-applications.html",
+      "source": "Oracle Official Documentation",
+      "section_title": "Applet:"
+    }
+  },
+  {
+    "text": "A business component associates columns from one or more tables into a single structure. It provides a layer of wrapping over tables, allowing applets to reference a business component rather than the underlying table. Business Components can have calculated fields that derive values from other fields.",
+    "metadata": {
+      "url": "https://docs.oracle.com/cd/E95904_01/books/ConfigApps/architecture-of-siebel-business-applications.html",
+      "source": "Oracle Official Documentation",
+      "section_title": "Business Component:"
+    }
+  },
+  {
+    "text": "A business object organizes business components into logical groups. It defines the relationships between business components through links.",
+    "metadata": {
+      "url": "https://docs.oracle.com/cd/E95904_01/books/ConfigApps/architecture-of-siebel-business-applications.html",
+      "source": "Oracle Official Documentation",
+      "section_title": "Business Object:"
+    }
+  },
+  {
+    "text": "A view is an object that contains a collection of related applets. Most views are master-detail views or list-form views.",
+    "metadata": {
+      "url": "https://docs.oracle.com/cd/E95904_01/books/ConfigApps/architecture-of-siebel-business-applications.html",
+      "source": "Oracle Official Documentation",
+      "section_title": "View:"
+    }
+  },
+  {
+    "text": "A screen is a top-level container that holds one or more views. Screens are organized in the Site Map for navigation.",
+    "metadata": {
+      "url": "https://docs.oracle.com/cd/E95904_01/books/ConfigApps/architecture-of-siebel-business-applications.html",
+      "source": "Oracle Official Documentation",
+      "section_title": "Screen:"
+    }
+  },
+  {
+    "text": "Workflows orchestrate multi-step processes such as approvals, escalations, and data synchronization. They can be invoked by user actions, server components, or external events. Workflows can call Business Services for reusable logic.",
+    "metadata": {
+      "url": "https://docs.oracle.com/cd/E95904_01/books/ConfigApps/architecture-of-siebel-business-applications.html",
+      "source": "Oracle Official Documentation",
+      "section_title": "Workflow Process:"
+    }
+  },
+  {
+    "text": "A business service contains a set of methods that can be called programmatically. Use Business Services for transformations, rule evaluation, and integration calls. Siebel Web Engine:\nThe Siebel Web Engine (SWE) creates the Siebel CRM user interface as HTML pages. It combines HTML templates with data from the Siebel database and forwards them to the Siebel Web Server. The SWE also provides a notification mechanism that allows applets to update when data is modified.",
+    "metadata": {
+      "url": "https://docs.oracle.com/cd/E95904_01/books/ConfigApps/architecture-of-siebel-business-applications.html",
+      "source": "Oracle Official Documentation",
+      "section_title": "Business Service:"
+    }
+  },
+  {
+    "text": "Siebel Tutorials Collection\nSiebel Best Practices:\n- Best practices result in better performance and enhanced security\n- Use naming conventions consistently across the repository\n- Document every design decision and configuration change\n- Test at the Business Component and workflow layers where business rules live\n- Avoid custom scripting when declarative configuration can achieve the same result\nSiebel 3-Tier Architecture:\nThe Siebel application is built on a 3-tier architecture:\n1. Client Tier: The user interface (Siebel Web Client or Desktop Client)\n2. Business Layer: Siebel Server with Application Object Manager\n3. Database Layer: Oracle Database or other RDBMS\nSiebel Workflow:\nWorkflows are the backbone of Siebel automation. They can be invoked by user actions, server events, or scheduled jobs. Workflow processes consist of steps that can include business service calls, script execution, email notifications, property set manipulations, branching, and error handling. Siebel Server Manager:\nThe Siebel Server Manager command line is used to start, stop, and monitor Siebel server components. Common commands include siebenv start/stop and srvrmgr list components. SSL Configuration:\nEnable SSL in Siebel client web browsers for secure communication. Configure the Siebel Web Server Extension to use HTTPS. Install SSL certificates on the web server and configure the SWSE accordingly.",
+    "metadata": {
+      "url": "https://www.aired.in/2013/06/siebel-tutorials.html",
+      "source": "Aired Siebel Tutorials",
+      "section_title": "Introduction"
+    }
+  },
+  {
+    "text": "Oracle Siebel CRM Applications\nSiebel CRM Application Framework:\nThe application framework provides tools to configure business rules and automate processes. It includes a DevOps framework for delivering application updates with near-zero downtime. Siebel Web Tools (IDE):\nSiebel Web Tools allows developers to configure Siebel CRM applications from anywhere using a browser. Developers use Workspaces to develop and test configurations without affecting other users. Workspaces support parallel development with versioning and governance. Parallel Development:\nMany developers can work on the same objects simultaneously. Full versioning mechanism tracks changes and enables governance. A hierarchical framework supports building features and releases. Automated Testing:\nTest automation interfaces optimize the application testing process. Build regression packs that cover critical business component validations, workflows, and integration points. Siebel Deployment:\nThe deployment framework orchestrates application updates across environments. Configuration changes can be migrated from development to test to production using Application Deployment Manager.",
+    "metadata": {
+      "url": "https://www.oracle.com/applications/siebel/",
+      "source": "Unknown Source",
+      "section_title": "Introduction"
+    }
+  }
+]
